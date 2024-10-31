@@ -1,0 +1,52 @@
+{% extends "web/base.html" %}
+{% load static %}
+{% block content %}
+
+
+	<!-- Start main-content -->
+	<section class="page-title" style="background-image: url('{% static "images/background/page-title.jpg" %}');">
+		<div class="auto-container">
+			<div class="title-outer text-center">
+				<h1 class="title">Blog</h1>
+				<ul class="page-breadcrumb">
+					<li><a href="{% url "index" %}">Home</a></li>
+					<li>Blog</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<!-- end main-content -->
+
+
+	<!-- News Section Two -->
+	<section class="news-section section-space">
+		<div class="auto-container">
+			<div class="row">
+				<!-- News Block -->
+				{% for blog in blogs %}
+				<div class="news-block col-lg-4 col-md-6 wow fadeInUp">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image"><a href=""><img src="{{blog.image.url}}" alt=""></a></figure>
+						</div>
+						<div class="content-box">
+							<span class="date">{{blog.date}}</span>
+							<span class="post-info"><i class="fa fa-user-circle"></i> by Admin</span>
+							<h4 class="title"><a href="{{ blog.get_absolute_url }}">{{blog.title}}</a></h4>
+							
+							<a href="{{ blog.get_absolute_url }}" class="read-more"><i class="fa fa-long-arrow-alt-right"></i> Read More</a>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+				
+				
+			</div>
+		</div>
+	</section>
+	<!--End News Section -->
+
+	<!-- Main Footer -->
+	
+
+	{% endblock %}

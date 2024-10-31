@@ -1,0 +1,102 @@
+
+{% extends "web/base.html" %}
+{% load static %}
+{% block content %}
+	<!-- Start main-content -->
+	<section class="page-title" style="background-image: url('{% static "images/background/page-title.jpg" %}');">
+		<div class="auto-container">
+			<div class="title-outer text-center">
+				<h1 class="title">Incorporation</h1>
+				<ul class="page-breadcrumb">
+					<li><a href="{% url "index" %}">Home</a></li>
+					<li>Service Details</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<!-- end main-content -->
+
+    <!--Start Services Details-->
+    <section class="services-details">
+        <div class="container">
+            <div class="row">
+                <!--Start Services Details Sidebar-->
+                <div class="col-xl-4 col-lg-4">
+                    <div class="service-sidebar">
+                        <!--Start Services Details Sidebar Single-->
+                        <div class="sidebar-widget service-sidebar-single">
+
+                            <div class="sidebar-service-list">
+                                <ul>
+                                    <li><a href="{% url "service_detail" %}" class="current"><i class="fas fa-angle-right"></i><span>Incorporation<span></a></li>
+                                    <li class="current"><a href="{% url "service_detail2" %}"><i class="fas fa-angle-right"></i><span>Audits</span></a></li>
+                                    <li><a href="{% url "service_detail3" %}"><i class="fas fa-angle-right"></i><span>Trae Mark</span></a></li>
+                                    <li><a href="{% url "service_detail4" %}"><i class="fas fa-angle-right"></i><span>Taxation Compliance</span></a></li>
+                                    <li><a href="{% url "service_detail5" %}"><i class="fas fa-angle-right"></i><span>Winding Up</span></a></li>
+                                    <li><a href="{% url "service_detail6" %}"><i class="fas fa-angle-right"></i><span>consulting</span></a></li>
+
+                                </ul>
+                            </div>
+
+                            <div class="service-details-help">
+                                <div class="help-shape-1"></div>
+                                <div class="help-shape-2"></div>
+                                <h2 class="help-title">Contact with <br> us for any <br> advice</h2>
+                                <div class="help-icon">
+                                    <span class=" lnr-icon-phone-handset"></span>
+                                </div>
+                                <div class="help-contact">
+                                    <p>Need help? Talk to an expert</p>
+                                    <a href="tel:12463330079">+(91) 8089145554</a>
+                                </div>
+                            </div>
+
+                            <!--Start Services Details Sidebar Single-->
+                            <div class="sidebar-widget service-sidebar-single mt-4">
+                                <div class="service-sidebar-single-btn wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1200m">
+                                    <a href="#" class="theme-btn btn-style-one d-grid"><span class="btn-title"><span class="fas fa-file-pdf"></span> download pdf file</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Services Details Sidebar-->
+                    </div>
+                </div>
+
+                <!--Start Services Details Content-->
+				<div class="col-xl-8 col-lg-8">
+					<div class="services-details__content">
+						<img src="{% static "images/resource/service-details.jpg" %}" alt="Incorporation Services" />
+						<h3 class="mt-4">Incorporation Overview</h3>
+						<p>We deliver structured insights and essential support to guide businesses through the incorporation process, ensuring compliance, efficiency, and alignment with unique client goals.</p>
+						<p>With a focus on professional standards and industry knowledge, we help businesses establish a solid foundation, navigating regulatory requirements and best practices for long-term success.</p>
+						
+						<div class="content mt-40">
+							<div class="text">
+								<h3>Incorporation Center</h3>
+								<p>Our team of experts is dedicated to assisting you throughout the incorporation journey, from initial consultation to registration. We ensure every step aligns with your strategic goals and vision.</p>
+								<blockquote class="blockquote-one">"Our mission is to enable your business to launch with strength and achieve enduring success."</blockquote>
+							</div>
+							<div class="feature-list mt-4">
+								<div class="row clearfix">
+									<div class="col-lg-6 col-md-6 col-sm-12 column">
+										
+										<p>We offer a holistic approach to incorporation, analyzing every aspect of the business environment to deliver sustainable and innovative solutions.</p>
+									</div>
+									<div class="col-lg-6 col-md-6 col-sm-12 column">
+										
+										<p>Our team combines regulatory knowledge and practical experience to help you achieve measurable results that align with your business’s founding objectives.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+                <!--End Services Details Content-->
+            </div>
+        </div>
+    </section>
+    <!--End Services Details-->
+
+   {% endblock %}
